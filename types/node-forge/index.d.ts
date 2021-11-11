@@ -836,6 +836,9 @@ declare module "node-forge" {
         function messageToPem(msg: PkcsSignedData, maxline?: number): string;
 
         function messageFromPem(pem: pki.PEM): PkcsEnvelopedData | PkcsSignedData;
+        
+        function messageFromAsn1(obj: asn1.Asn1): PkcsEnvelopedData | PkcsSignedData;
+
     }
 
     namespace pkcs5 {
